@@ -9,7 +9,7 @@ function Send-IoTDeviceMessage {
   #>
   [cmdletbinding()]
   param(
-    $messageString,
+    $messageString = "Foo",
     $deviceClient
   )
   $messagetosend = [Microsoft.Azure.Devices.Client.Message]([Text.Encoding]::ASCII.GetBytes($messageString))
